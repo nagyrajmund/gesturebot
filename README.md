@@ -10,6 +10,7 @@
 - Clone the repository
   ```
   git clone git@github.com:nagyrajmund/gesticulating_agent_unity.git
+  cd gesticulating_agent_unity
   git checkout dialogflow_demo
   ```
 - Download the compiled Unity project:
