@@ -1,6 +1,7 @@
 ![teaser image](https://i.imgur.com/feoihA2.png)
 
 # Instructions for running the Blenderbot demo
+*Note: the source code of the Unity project is available [from this link](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
 ## Preliminaries
 - Clone the repository
   ```
