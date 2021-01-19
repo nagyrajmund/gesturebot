@@ -3,7 +3,7 @@
 # Instructions for running the Blenderbot demo
 *Note: For the other demo with DialogFlow integration, visit the `dialogflow_demo` branch.*
 
-*The source code of the Unity project is available [from this link](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
+*The source code of the Unity project is available [from this link](https://drive.google.com/drive/folders/1LrsFGvUl3G8jKvrU5nlSs4QWuvkmty10), but below we provide a stand-alone executable version that doesn't require installing Unity.*
 ## Preliminaries
 - Clone the repository
   ```
