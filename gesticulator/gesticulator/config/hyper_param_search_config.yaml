@@ -1,0 +1,18 @@
+# For detailed information regarding these parameters, see 'model_config.py'
+# ---- Network architecture ----
+text_embedding: 'FastText'
+
+# ---- Parameters for saving model predictions ----
+save_val_predictions_every_n_epoch: 15
+save_train_predictions_every_n_epoch: 15
+saved_prediction_duration_sec: 9
+prediction_save_formats: ["video", "raw_gesture"] # Can be "bvh_file" and "raw_gesture" too
+
+# ---- Binary flags ---- (simply uncomment them to turn them on) 
+generate_semantic_test_predictions
+# use_pca
+# use_recurrent_speech_enc
+# no_overwrite_warning 
+
+# If 'no_overwrite_warning' (above) is set, and the given <run_name> directory
+# already exists, it will be cleared without displaying any warnings

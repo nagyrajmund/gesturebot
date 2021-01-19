@@ -1,0 +1,4 @@
+/results/*
+/gesticulator/interface/.word_vectors_cache/*
+**/__pycache__/*
+**/*.egg-info/*
