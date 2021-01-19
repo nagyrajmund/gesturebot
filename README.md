@@ -1,6 +1,8 @@
 ![teaser image](https://i.imgur.com/feoihA2.png)
 
 # Instructions for running the DialogFlow demo
+**This demo requires a functioning DialogFlow project to run.**
+
 *Note: For the other demo with Blenderbot and Mozilla TTS, visit the `blenderbot_demo` branch.*
 
 *The source code of the Unity project is available [from this link](https://drive.google.com/file/d/1SQiKh4Pcr1c4_y2LBFaSNUOkE-0CxrmG/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
