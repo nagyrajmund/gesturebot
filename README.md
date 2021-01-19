@@ -4,7 +4,7 @@
 ## Preliminaries
 - Clone the repository
   ```
-  git clone git@github.com:nagyrajmund/gesticulating_agent.git
+  git clone git@github.com:nagyrajmund/gesticulating_agent_unity.git
   ```
 - Download the compiled Unity project:
   - [Linux release](https://drive.google.com/file/d/1DiB-nebwuzdIa5delYZK7J-cMlUhPMeX/view?usp=sharing)
