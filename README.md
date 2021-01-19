@@ -1,31 +1,51 @@
-# Instructions
+[teaser image](!https://imgur.com/feoihA2)
+
+# Instructions for running the Blenderbot demo
 ## Preliminaries
 - Clone the repository
   ```
   git clone git@github.com:nagyrajmund/gesticulating_agent.git
   ```
-- Put your `credentials.json` file into the `unity/Assets/` folder
-- Create a `project_url.txt` file containing your Dialogflow project's URL in the `unity/Assets/` folder
+- Download the compiled Unity project:
+  - [Linux release](https://drive.google.com/file/d/1DiB-nebwuzdIa5delYZK7J-cMlUhPMeX/view?usp=sharing)
+  - Windows 10 release
 
-- Download Apache ActiveMQ 5 from this link http://activemq.apache.org/components/classic/download/
+- Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/)
 
-## Installing the gesture generation model
+## Installation
 ### With anaconda (option 1)
 - Create a new conda environment and install the requirements (using the terminal on Linux or the Anaconda Prompt on Windows)
   ```
-  conda create --name gesturebot -y python=3.6.9
+  # From the root of the repository:
+  # Install the gesture generation model
+  conda create --name gesturebot -y python=3.7
   conda activate gesturebot
   cd gesticulator
   python install_script.py
+  
+  # Install Mozilla TTS
+  cd gesticulator/interface/TTS_repo
+  python setup.py develop
+  
+  # Download TTS model files
+  gdown --id 1NFsfhH8W8AgcfJ-BsL8CYAwQfZ5k4T-n -O tts_model.pth.tar
+  gdown --id 1IAROF3yy9qTK43vG_-R67y3Py9yYbD6t -O config.json
+  gdown --id 1Ty5DZdOc0F7OTGj9oJThYbL5iVu_2G0K -O vocoder_model.pth.tar
+  gdown --id 1Rd0R_nRCrbjEdpOwq6XwZAktvugiBvmu -O config_vocoder.json
+  gdown --id 11oY3Tv0kQtxK_JPgxrfesa99maVXHNxU -O scale_stats_vocoder.npy
+
+  cd ..
   ```
+
 ### With docker (option 2)
 - Pull the docker image of the gesture generation model
   ```
   docker pull rajmundn/gesticulating_agent:gesturebot_dialogflow
   ```
+
 ## Running the project
 - Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
-- Open the `unity` folder in the repo as a new project in Unity, select the `Chatbot example` scene and enter Play mode
+- Run the executable in the compiled Unity project to start the Unity player
 - (option 1): Start running the gesture generation model with conda
   - in the previously created conda environment, from the `gesticulator` folder, run:
     ```
@@ -49,21 +69,3 @@ Now you should be able to talk with the agent via the following ways:
   - Press `t`-key once to start recording speech input, and `t`-key again to stop recording
 
 and the agent should be moving when it replies.
-
-## ActiveMQ
-- Start the ActiveMQ server by running `/bin/activemq start` in the folder where it's installed 
-  - if the provided ActiveMQ DLLs are not working, follow the instructions in [the UnityBMLACtiveMQ repo](https://github.com/bernuly/UnityBMLActiveMQ)
-
-### Scene anatomy
-The agent is `Assets/MotionExporters/Scenes/Sample/Model/Robot.fbx`
-
-- Robot
-   - Assets/Scripts/ActiveMQClient.cs
-   - Assets/Scripts/DialogFlowCommunicator.cs
-   - Assets/Scripts/GesticulatingAgent.cs
-   - Assets/Scripts/MotionVisualizer.cs
-- HUD
-   - MicInput
-   - ButtonSendTextToChatbot
-      - reference to: GesticulatingAgent.HandleTextInput
-      
