@@ -1,4 +1,4 @@
-[teaser image](!https://imgur.com/feoihA2)
+![teaser image](https://i.imgur.com/feoihA2.png)
 
 # Instructions for running the Blenderbot demo
 ## Preliminaries
@@ -61,7 +61,7 @@
     ```
     docker start -ai gesturebot
     ```
-- Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. 
+- Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
 
 Now you should be able to talk with the agent via the following ways:
   - Enter text in the input field and press `Submit` OR
