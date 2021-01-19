@@ -10,6 +10,7 @@
 - Clone the repository
   ```
   git clone git@github.com:nagyrajmund/gesticulating_agent_unity.git
+  git checkout dialogflow_demo
   ```
 - Download the compiled Unity project:
   - [Linux release](https://drive.google.com/file/d/1xen8jKdNGeyxKqGKgf-rrmewM4iaZL0h/view?usp=sharing)
