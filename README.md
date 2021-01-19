@@ -9,7 +9,7 @@
 - Download the compiled Unity project:
   - [Linux release](https://drive.google.com/file/d/1xen8jKdNGeyxKqGKgf-rrmewM4iaZL0h/view?usp=sharing)
   - Windows 10 release
-
+- Set your DialogFlow project URL in `gesturebot_Data/project_url.txt` and store your Google Cloud credentials in `gesturebot_Data/credentials.json`
 - Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/)
 
 ## Installation
