@@ -1,13 +1,13 @@
 ![teaser image](https://i.imgur.com/feoihA2.png)
 
-# Instructions for running the Blenderbot demo
+# Instructions for running the DialogFlow demo
 ## Preliminaries
 - Clone the repository
   ```
   git clone git@github.com:nagyrajmund/gesticulating_agent_unity.git
   ```
 - Download the compiled Unity project:
-  - [Linux release](https://drive.google.com/file/d/1DiB-nebwuzdIa5delYZK7J-cMlUhPMeX/view?usp=sharing)
+  - [Linux release](https://drive.google.com/file/d/1xen8jKdNGeyxKqGKgf-rrmewM4iaZL0h/view?usp=sharing)
   - Windows 10 release
 
 - Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/)
@@ -18,23 +18,10 @@
   ```
   # From the root of the repository:
   # Install the gesture generation model
-  conda create --name gesturebot -y python=3.7
-  conda activate gesturebot
+  conda create --name gesturebot_df -y python=3.7
+  conda activate gesturebot_df
   cd gesticulator
   python install_script.py
-  
-  # Install Mozilla TTS
-  cd gesticulator/interface/TTS_repo
-  python setup.py develop
-  
-  # Download TTS model files
-  gdown --id 1NFsfhH8W8AgcfJ-BsL8CYAwQfZ5k4T-n -O tts_model.pth.tar
-  gdown --id 1IAROF3yy9qTK43vG_-R67y3Py9yYbD6t -O config.json
-  gdown --id 1Ty5DZdOc0F7OTGj9oJThYbL5iVu_2G0K -O vocoder_model.pth.tar
-  gdown --id 1Rd0R_nRCrbjEdpOwq6XwZAktvugiBvmu -O config_vocoder.json
-  gdown --id 11oY3Tv0kQtxK_JPgxrfesa99maVXHNxU -O scale_stats_vocoder.npy
-
-  cd ..
   ```
 
 ### With docker (option 2)
