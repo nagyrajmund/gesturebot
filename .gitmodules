@@ -1,0 +1,3 @@
+[submodule "gesticulator/gesticulator/interface/TTS_repo"]
+	path = gesticulator/gesticulator/interface/TTS_repo
+	url = https://github.com/mozilla/TTS
