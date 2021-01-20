@@ -33,8 +33,8 @@ We present a framework for integrating data-driven gesture generation models int
 - Create a new conda environment and install the requirements (using the terminal on Linux or the Anaconda Prompt on Windows) by running the following commands **from the root of the repository**:
   ```
   # Create conda environment
-  conda create --name gesturebot -y python=3.7
-  conda activate gesturebot
+  conda create --name gesturebot_blenderbot -y python=3.7
+  conda activate gesturebot_blenderbot
   
   # Install gesture generation model
   cd gesticulator
@@ -79,7 +79,7 @@ Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Li
     ```
 
 ### Step 3: Running Unity
-Run the executable (`gesturebot.x86_64` or `gesturebot.exe` in the `Unity/blenderbot_demo/` folder) in the Unity project.
+Run the Unity executable (`gesturebot.x86_64` or `gesturebot.exe` in the `Unity/blenderbot_demo/` folder)
 
 Now you should be able to talk with the agent via the following ways:
   - Enter text in the input field and press `Submit` OR
