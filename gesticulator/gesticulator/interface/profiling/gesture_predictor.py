@@ -140,9 +140,6 @@ class GesturePredictor:
             # For log-Mel spectrograms, silent parts are around -12
             audio_fill_value = -12
         elif self.feature_type == "GeMAPS":
-            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-            print("WARNING: GeMAPS temporarily uses 0 as padding value, which might be incorrect.")
-            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
             audio_fill_value = 0
         else:
             print("ERROR: only prosody and spectrogram are supported at the moment.")
