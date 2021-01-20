@@ -21,7 +21,7 @@ RUN apt-get install -y sox
 
 # Install TTS repo
 WORKDIR /workspace/gesticulator/interface/TTS_repo
-RUN apt-get install espeak
+RUN apt-get install -y espeak
 RUN pip install -r requirements.txt
 RUN python setup.py develop
 
