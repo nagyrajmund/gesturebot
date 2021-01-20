@@ -34,6 +34,7 @@
   cd gesticulator/interface/TTS_repo
   pip install -r requirements.txt
   python setup.py develop
+  sudo apt-get install espeak
   
   # Download TTS model files
   gdown --id 1NFsfhH8W8AgcfJ-BsL8CYAwQfZ5k4T-n -O tts_model.pth.tar
