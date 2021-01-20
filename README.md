@@ -20,7 +20,7 @@ We present a framework for integrating data-driven gesture generation models int
 - Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/) and extract the 
   - Extract the archive into the `ActiveMQ` folder
 - Download the Unity project:
-  - [Linux release](https://drive.google.com/file/d/1DiB-nebwuzdIa5delYZK7J-cMlUhPMeX/view?usp=sharing) | Windows 10 release
+  - [Linux release](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing) | Windows 10 release
   - Extract contents of the Unity project into the `Unity` folder
 
 ## Installation
@@ -87,3 +87,7 @@ Now you should be able to talk with the agent via the following ways:
   - Press `t`-key once to start recording speech input, and `t`-key again to stop recording
 
 and the agent should be moving when it replies.
+
+# Source code for the Unity project
+The source code for the Unity component is available [on this link](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing).
+The authors would like to thank [Lewis King](https://lewisbenking.github.io/) for sharing the source code of his JimBot project with us.
