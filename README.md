@@ -79,7 +79,7 @@ Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Li
     ```
 
 ### Step 3: Running Unity
-Run the executable in the compiled Unity project to start the Unity player.
+Run the executable (`gesturebot.x86_64` or `gesturebot.exe` in the `Unity/blenderbot_demo/` folder) in the Unity project.
 
 Now you should be able to talk with the agent via the following ways:
   - Enter text in the input field and press `Submit` OR
