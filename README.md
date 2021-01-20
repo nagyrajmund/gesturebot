@@ -1,9 +1,12 @@
-![teaser image](https://i.imgur.com/feoihA2.png)
+![title image](https://i.imgur.com/K1IXnDj.png)
+
+We present a framework for integrating data-driven gesture generation models into embodied conversational agents in Unity. 
 
 # Instructions for running the DialogFlow demo
+![teaser image](https://i.imgur.com/feoihA2.png)
+
 **This demo requires a functioning DialogFlow project to run.**
 
-*The source code of the Unity project is available [from this link](https://drive.google.com/drive/folders/1SXi2sVPmGpBKXGxeT-FYWIh7NvFZ5f88), but below we provide a stand-alone executable version that doesn't require installing Unity.*
 ## Preliminaries
 - Clone the repository
   ```
@@ -11,54 +14,58 @@
   cd gesticulating_agent_unity
   git checkout dialogflow_demo
   ```
-- Download the compiled Unity project:
-  - [Linux release](https://drive.google.com/file/d/1xen8jKdNGeyxKqGKgf-rrmewM4iaZL0h/view?usp=sharing)
-  - Windows 10 release
-- Set your DialogFlow project URL in `gesturebot_Data/project_url.txt` and store your Google Cloud credentials in `gesturebot_Data/credentials.json`
-- Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/)
+
+- Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/) and extract the 
+  - Extract the archive into the `ActiveMQ` folder
+- Download the Unity project:
+  - [Linux release](https://drive.google.com/file/d/11BWWIjYbujE6gobdmmalYhFEAY209Kkm/view?usp=sharing) | Windows 10 release
+  - Extract contents of the Unity project into the `Unity` folder
+  - Configure the DialogFlow project as described in `README_DialogFlow.md`
 
 ## Installation
-### With anaconda (option 1)
-- Create a new conda environment and install the requirements (using the terminal on Linux or the Anaconda Prompt on Windows)
-  ```
-  # From the root of the repository:
-  # Install the gesture generation model
-  conda create --name gesturebot_df -y python=3.7
-  conda activate gesturebot_df
-  cd gesticulator
-  python install_script.py
-  ```
-
-### With docker (option 2)
+### Option 1: using docker (recommended)
 - Pull the docker image of the gesture generation model
   ```
   docker pull rajmundn/gesticulating_agent:gesturebot_dialogflow
   ```
 
+### Option 2: using anaconda (alternative)
+- Create a new conda environment and install the requirements (using the terminal on Linux or the Anaconda Prompt on Windows) by running the following commands **from the root of the repository**:
+  ```
+  # Create conda environment
+  conda create --name gesturebot_dialogflow -y python=3.7
+  conda activate gesturebot_dialogflow
+  
+  # Install gesture generation model
+  cd gesticulator
+  python install_script.py
+  ```
+
 ## Running the project
+### Step 1: ActiveMQ
+Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
+
+### Step 2: Gesture generation model
 * Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
 
-1. Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
-
-2. (option 1): Start running the gesture generation model with conda
+#### Option 1: using docker
+  - When the project is run for the first time, the docker container may be created by running the following command **from the root of the repository**:
+    ```
+    docker run -v $(pwd)/Unity/dialogflow_demo/gesturebot_Data:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_dialogflow rajmundn/gesticulating_agent:gesturebot_dialogflow
+    ```
+  - After the container has been created, it can be ran with:
+    ```
+    docker start -ai gesturebot_dialogflow
+    ```
+#### Option 2: using anaconda
   - in the previously created conda environment, from the `gesticulator` folder, run:
     ```
     cd gesticulator/interface
     python main.py
     ```
-2. (option 2): Start running the gesture generation model with docker
-  - When the project is run for the first time, the docker container may be created by running the following command from the root of the repository:
-    
-    **replace `PATH_TO_UNITY_DATA` with the absolute path of the `gesturebot_Data` folder in the compiled Unity project**
-    ```
-    docker run -v PATH_TO_UNITY_DATA:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_df rajmundn/gesticulating_agent:gesturebot_dialogflow
-    ```
-  - After the container has been created, it can be ran with:
-    ```
-    docker start -ai gesturebot_df
-    ```
 
-3. Run the executable in the compiled Unity project to start the Unity player
+### Step 3: Running Unity
+Run the Unity executable (`gesturebot.x86_64` or `gesturebot.exe` in the `Unity/dialogflow_demo/` folder)
 
 Now you should be able to talk with the agent via the following ways:
   - Enter text in the input field and press `Submit` OR
@@ -66,3 +73,8 @@ Now you should be able to talk with the agent via the following ways:
   - Press `t`-key once to start recording speech input, and `t`-key again to stop recording
 
 and the agent should be moving when it replies.
+
+# Source code for the Unity project
+The source code for the Unity component with DialogFlow integration is available [on this link](https://drive.google.com/file/d/1SQiKh4Pcr1c4_y2LBFaSNUOkE-0CxrmG/view?usp=sharing).
+
+The authors would like to thank [Lewis King](https://lewisbenking.github.io/) for sharing the source code of his JimBot project with us.
