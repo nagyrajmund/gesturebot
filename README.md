@@ -3,9 +3,7 @@
 # Instructions for running the DialogFlow demo
 **This demo requires a functioning DialogFlow project to run.**
 
-*Note: For the other demo with Blenderbot and Mozilla TTS, visit the `blenderbot_demo` branch.*
-
-*The source code of the Unity project is available [from this link](https://drive.google.com/file/d/1SQiKh4Pcr1c4_y2LBFaSNUOkE-0CxrmG/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
+*The source code of the Unity project is available [from this link](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
 ## Preliminaries
 - Clone the repository
   ```
@@ -38,15 +36,15 @@
   ```
 
 ## Running the project
-- Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
-- Run the executable in the compiled Unity project to start the Unity player
-- (option 1): Start running the gesture generation model with conda
+* Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
+1. Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
+2.1 (option 1): Start running the gesture generation model with conda
   - in the previously created conda environment, from the `gesticulator` folder, run:
     ```
     cd gesticulator/interface
     python main.py
     ```
-- (option 2): Start running the gesture generation model with docker
+2.2 (option 2): Start running the gesture generation model with docker
   - When the project is run for the first time, the docker container may be created by running the following command from the root of the repository:
     
     **replace `PATH_TO_UNITY_DATA` with the absolute path of the `gesturebot_Data` folder in the compiled Unity project**
@@ -57,7 +55,8 @@
     ```
     docker start -ai gesturebot_df
     ```
-- Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
+
+3. Run the executable in the compiled Unity project to start the Unity player
 
 Now you should be able to talk with the agent via the following ways:
   - Enter text in the input field and press `Submit` OR
