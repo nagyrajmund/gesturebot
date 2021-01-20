@@ -20,7 +20,7 @@ We present a framework for integrating data-driven gesture generation models int
 - Download the Unity project:
   - [Linux release](https://drive.google.com/file/d/11BWWIjYbujE6gobdmmalYhFEAY209Kkm/view?usp=sharing) | Windows 10 release
   - Extract contents of the Unity project into the `Unity` folder
-  - Configure the DialogFlow project as described in `README_DialogFlow.md`
+  - Configure the DialogFlow project as described in [README_DialogFlow.md](README_DialogFlow.md)
 
 ## Installation
 ### Option 1: using docker (recommended)
