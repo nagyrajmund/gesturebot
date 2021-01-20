@@ -63,6 +63,5 @@ transformers
 torchtext==0.4.0
 tqdm==4.44.1
 transforms3d==0.3.1
-typing==3.6.6
 urllib3==1.25.8
 Werkzeug==1.0.1
