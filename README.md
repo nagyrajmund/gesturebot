@@ -3,7 +3,7 @@
 # Instructions for running the DialogFlow demo
 **This demo requires a functioning DialogFlow project to run.**
 
-*The source code of the Unity project is available [from this link](https://drive.google.com/file/d/1WTbpeuHm_i0qhJOFfMXjoqwnOtJKihym/view?usp=sharing), but below we provide a stand-alone executable version that doesn't require installing Unity.*
+*The source code of the Unity project is available [from this link](https://drive.google.com/drive/folders/1SXi2sVPmGpBKXGxeT-FYWIh7NvFZ5f88), but below we provide a stand-alone executable version that doesn't require installing Unity.*
 ## Preliminaries
 - Clone the repository
   ```
