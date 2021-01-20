@@ -49,11 +49,11 @@
 - (option 2): Start running the gesture generation model with docker
   - When the project is run for the first time, the docker container may be created by running the following command from the root of the repository:
     ```
-    docker run -v $(pwd)/../unity/Assets:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_blender rajmundn/gesticulating_agent:gesturebot_dialogflow
+    docker run -v $(pwd)/../unity/Assets:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_df rajmundn/gesticulating_agent:gesturebot_dialogflow
     ```
   - After the container has been created, it can be ran with:
     ```
-    docker start -ai gesturebot_blender
+    docker start -ai gesturebot_df
     ```
 - Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
 
