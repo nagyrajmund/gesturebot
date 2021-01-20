@@ -73,8 +73,10 @@ class GestureGeneratorService:
             
         if self.using_docker:    
             # Workaround for docker:    
-            # The Unity/Assets folder is mounted as a docker volume,
-            # so the path within the container will be different
+            # Normally, the Unity/Assets folder is not available from docker containers
+            # When creating the container, we create a docker volume at "docker_volume" for the Unity/Assets folder 
+            # As a result, the "docker_volume" folder inside the container is equivalent with the Unity/Assets folder
+            # (i.e. they are synchronized)
             filename = os.path.split(received_message['audio_path'])[1]
             new_path = os.path.join("docker_volume", "Audio", filename)
             received_message['audio_path'] = new_path
@@ -94,9 +96,9 @@ class GestureGeneratorService:
 
         answer = json.dumps(
             {
-                'xRotationCsvPath' : join(save_folder, out_file.format('x')),
-                'yRotationCsvPath' : join(save_folder, out_file.format('y')),
-                'zRotationCsvPath' : join(save_folder, out_file.format('z')),
+                'xRotationCsvPath' : join(unity_assets_folder, out_file.format('x')),
+                'yRotationCsvPath' : join(unity_assets_folder, out_file.format('y')),
+                'zRotationCsvPath' : join(unity_assets_folder, out_file.format('z')),
                 'framerate' : 20,
                 'numFrames' : gestures.shape[0]
             }, separators=(',', ':'))
