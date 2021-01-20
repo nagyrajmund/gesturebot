@@ -32,6 +32,7 @@
   
   # Install Mozilla TTS
   cd gesticulator/interface/TTS_repo
+  pip install -r requirements.txt
   python setup.py develop
   
   # Download TTS model files
