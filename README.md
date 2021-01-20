@@ -37,14 +37,16 @@
 
 ## Running the project
 * Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
+
 1. Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
-2.1 (option 1): Start running the gesture generation model with conda
+
+2. (option 1): Start running the gesture generation model with conda
   - in the previously created conda environment, from the `gesticulator` folder, run:
     ```
     cd gesticulator/interface
     python main.py
     ```
-2.2 (option 2): Start running the gesture generation model with docker
+2. (option 2): Start running the gesture generation model with docker
   - When the project is run for the first time, the docker container may be created by running the following command from the root of the repository:
     
     **replace `PATH_TO_UNITY_DATA` with the absolute path of the `gesturebot_Data` folder in the compiled Unity project**
