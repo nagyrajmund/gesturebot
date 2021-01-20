@@ -8,6 +8,10 @@
 - Clone the repository
   ```
   git clone git@github.com:nagyrajmund/gesticulating_agent_unity.git
+  cd gesticulating_agent_unity
+ 
+  git submodule init
+  git submodule update
   ```
 - Download the compiled Unity project:
   - [Linux release](https://drive.google.com/file/d/1DiB-nebwuzdIa5delYZK7J-cMlUhPMeX/view?usp=sharing)
