@@ -48,7 +48,7 @@
 ### With docker (option 2)
 - Pull the docker image of the gesture generation model
   ```
-  docker pull rajmundn/gesticulating_agent:gesturebot_dialogflow
+  docker pull rajmundn/gesticulating_agent:gesturebot_blenderbot
   ```
 
 ## Running the project
@@ -67,11 +67,11 @@
     
     **replace `PATH_TO_UNITY_DATA` with the absolute path of the `gesturebot_Data` folder in the compiled Unity project**
     ```
-    docker run -v PATH_TO_UNITY_DATA:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot rajmundn/gesticulating_agent:gesturebot_dialogflow
+    docker run -v PATH_TO_UNITY_DATA:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_bb rajmundn/gesticulating_agent:gesturebot_blenderbot
     ```
   - After the container has been created, it can be ran with:
     ```
-    docker start -ai gesturebot
+    docker start -ai gesturebot_bb
     ```
 
 3. Run the executable in the compiled Unity project to start the Unity player
