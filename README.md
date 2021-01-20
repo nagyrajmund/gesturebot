@@ -48,8 +48,10 @@
     ```
 - (option 2): Start running the gesture generation model with docker
   - When the project is run for the first time, the docker container may be created by running the following command from the root of the repository:
+    
+    **replace `PATH_TO_UNITY_DATA` with the absolute path of the `gesturebot_Data` folder in the compiled Unity project**
     ```
-    docker run -v $(pwd)/../unity/Assets:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_df rajmundn/gesticulating_agent:gesturebot_dialogflow
+    docker run -v PATH_TO_UNITY_DATA:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_df rajmundn/gesticulating_agent:gesturebot_dialogflow
     ```
   - After the container has been created, it can be ran with:
     ```
