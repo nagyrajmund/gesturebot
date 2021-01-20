@@ -56,16 +56,16 @@ We present a framework for integrating data-driven gesture generation models int
   cd ..
   ```
 ## Running the project
-* Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
-
 ### Step 1: ActiveMQ
 Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Linux) or `bin/activemq start` in a command prompt (on Windows).
 
 ### Step 2: Gesture generation model
+* Note that the gesture generation model will download around 10 GBs of data (for the language model) into the `.word_vectors_cache` folder when it's run for the first time. However, the 6,6 GB `wiki.en.vec` file can be removed after the first run.
+
 #### Option 1: using docker
   - When the project is run for the first time, the docker container may be created by running the following command **from the root of the repository**:
     ```
-    docker run -v $(pwd)/../Unity/gesturebot_blenderbot_demo/gesturebot_Data:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_blenderbot rajmundn/gesticulating_agent:gesturebot_blenderbot
+    docker run -v $(pwd)/../Unity/blenderbot_demo/gesturebot_Data:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_blenderbot rajmundn/gesticulating_agent:gesturebot_blenderbot
     ```
   - After the container has been created, it can be ran with:
     ```
