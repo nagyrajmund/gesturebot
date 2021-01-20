@@ -65,7 +65,7 @@ Start the ActiveMQ server by running `./bin/activemq start` in a terminal (on Li
 #### Option 1: using docker
   - When the project is run for the first time, the docker container may be created by running the following command **from the root of the repository**:
     ```
-    docker run -v $(pwd)/../Unity/blenderbot_demo/gesturebot_Data:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_blenderbot rajmundn/gesticulating_agent:gesturebot_blenderbot
+    docker run -v $(pwd)/Unity/blenderbot_demo/gesturebot_Data:/workspace/gesticulator/interface/docker_volume --network host -ti --name gesturebot_blenderbot rajmundn/gesticulating_agent:gesturebot_blenderbot
     ```
   - After the container has been created, it can be ran with:
     ```
