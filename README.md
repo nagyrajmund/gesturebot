@@ -20,7 +20,7 @@ We present a framework for integrating data-driven gesture generation models int
 - Download Apache ActiveMQ 5 [from this link](http://activemq.apache.org/components/classic/download/) and extract the 
   - Extract the archive into the `ActiveMQ` folder
 - Download the Unity project:
-  - [Linux release](https://drive.google.com/file/d/1QoF6buH4dACbBHIkS8Zy6VtCNwxnZ7Y0/view?usp=sharing) | Windows 10 release
+  - [Linux release](https://drive.google.com/file/d/1QoF6buH4dACbBHIkS8Zy6VtCNwxnZ7Y0/view?usp=sharing) | [Windows 10 release](https://drive.google.com/file/d/1WFBT29sje5-h_PiEM15be7FAQXNR5b6P/view?usp=sharing)
   - Extract contents of the Unity project into the `Unity` folder
 
 ## Installation
