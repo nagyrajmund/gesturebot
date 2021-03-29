@@ -1,9 +1,9 @@
-![title image](https://i.imgur.com/K1IXnDj.png)
+![authors](https://i.imgur.com/gBYmm8n.png)
+![video demonstration](https://i.imgur.com/rqYRYam.png)
 
-We present a framework for integrating data-driven gesture generation models into embodied conversational agents in Unity. 
+We present a framework for integrating data-driven gesture generation models into embodied conversational agents in Unity.
 
 # Instructions for running the DialogFlow demo
-![teaser image](https://i.imgur.com/feoihA2.png)
 
 **This demo requires a functioning DialogFlow project to run.**
 
