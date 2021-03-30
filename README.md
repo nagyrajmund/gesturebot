@@ -1,5 +1,5 @@
-![authors](https://i.imgur.com/gBYmm8n.png)
-![video demonstration](https://i.imgur.com/rqYRYam.png)
+[![authors](https://i.imgur.com/gBYmm8n.png)](https://arxiv.org/abs/2102.12302)
+[![video demonstration](https://i.imgur.com/rqYRYam.png)](https://www.youtube.com/watch?v=jhgUBS0125A)
 
 We present a framework for integrating data-driven gesture generation models into embodied conversational agents in Unity.
 
