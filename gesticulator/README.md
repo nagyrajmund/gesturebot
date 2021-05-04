@@ -1,1 +1,3 @@
-This folder contains a slightly modified version of a gesture generation model called Gesticulator. For details, please visit the official github repo at [https://github.com/Svito-zar/gesticulator](https://github.com/Svito-zar/gesticulator).
+- This folder contains a slightly modified version of a gesture generation model called Gesticulator. 
+- Please visit the [interface](gesticulator/interface/) folder to see how the model is integrated to the framework.
+- For further details about Gesticulator, please visit the official github repo at [https://github.com/Svito-zar/gesticulator](https://github.com/Svito-zar/gesticulator).
