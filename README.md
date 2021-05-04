@@ -14,7 +14,7 @@ Our video demonstration is available below:
 This branch contains our DialogFlow version of our implementation, which requires a functioning [DialogFlow](https://cloud.google.com/dialogflow) project to run.
 You may visit the [blenderbot_demo](https://github.com/nagyrajmund/gesturebot/) branch for an alternative version with a built-in Blenderbot chatbot.
 
-Please follow the instructions in [INSTALLATION.MD](INSTALLATION.md) to install and run the project.
+Please follow the instructions in [INSTALLATION.md](INSTALLATION.md) to install and run the project.
 
 ## Architecture
 
