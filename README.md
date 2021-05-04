@@ -1,5 +1,3 @@
-![](https://i.imgur.com/PSW6a23.jpg)
-
 This repo contains the official implementation for the paper [A Framework for Integrating Gesture Generation Models into Interactive Conversational Agents](http://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1779.pdf), published as a demonstration at the 20th International Conference on Autonomous Agents and Multiagent Systems (AAMAS),
 
 by [Rajmund Nagy](https://nagyrajmund.github.io/), [Taras Kucherenko](https://svito-zar.github.io/), [Birger Moëll](https://www.kth.se/profile/bmoell?l=en), [André Pereira](https://sites.google.com/view/andre-pereira-phd), [Hedvig Kjellström](https://www.kth.se/profile/hedvig) and [Ulysses Bernardet](https://research.aston.ac.uk/en/persons/ulysses-bernardet).
@@ -19,6 +17,7 @@ You may visit the [blenderbot_demo](https://github.com/nagyrajmund/gesturebot/) 
 Please follow the instructions in [INSTALLATION.MD](INSTALLATION.md) to install and run the project.
 
 # Adapting the components
+![](https://i.imgur.com/PSW6a23.jpg)
 The source code for the Unity component with DialogFlow integration is available [on this link](https://drive.google.com/file/d/14URIJxO9vyMNHGWbkRyz_jEIiHPGhByM/view?usp=sharing). 
 
 
