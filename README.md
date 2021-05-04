@@ -13,7 +13,7 @@ Our video demonstration is available below:
 # Instructions for running the demo
 This branch contains the Blenderbot version of our implementation with a built-in chatbot and TTS. You may visit the [dialogflow_demo](https://github.com/nagyrajmund/gesturebot/tree/dialogflow_demo/) branch for an alternative version that integrates [DialogFlow](https://cloud.google.com/dialogflow) to the project for speech generation.
 
-Please follow the instructions in [INSTALLATION.MD](INSTALLATION.md) to install and run the project.
+Please follow the instructions in [INSTALLATION.md](INSTALLATION.md) to install and run the project.
 
 ## Architecture
 
